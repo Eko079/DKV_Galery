@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const base = window.__PATH_PREFIX__ || "";
 
-  loadHTML(base + "header.html", "#header", base + "css/header.css", base);
-  loadHTML(base + "footer.html", "#footer", base + "css/footer.css", base);
+  loadHTML("/header.html", "#header", "/css/header.css", base);
+  loadHTML("/footer.html", "#footer", "/css/footer.css", base);
 
   // ===== Optional: feature marquee logic (safe if not present) =====
   const tracks = document.querySelectorAll(".marquee-track");
@@ -77,3 +77,4 @@ function fixRelativeUrls(root, base = "") {
     if (isRel(raw)) s.setAttribute("src", base + raw);
   });
 }
+
